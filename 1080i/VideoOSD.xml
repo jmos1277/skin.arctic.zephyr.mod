@@ -6,6 +6,7 @@
     
     <onunload>ClearProperty(osdshowinfo,home)</onunload>
     <controls>
+	<include>Furniture_OverlayInfoNewInfoButton</include>	
         <control type="group">
             <height>74</height>
             <bottom>0</bottom>
