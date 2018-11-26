@@ -8,7 +8,7 @@
 	<include name="Furniture_OverlayInfoNew">
 
         <control type="group">
-            <visible>[System.IdleTime(3) + Skin.HasSetting(osd.overlayinfoplayer) + Player.Paused] | Control.HasFocus(809)</visible>
+            <visible>System.IdleTime(3) + Skin.HasSetting(osd.overlayinfoplayer) + Player.Paused</visible>
            	<include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
 
@@ -34,7 +34,7 @@
             <right>SidePad</right>
             <top>PosterPad</top>
             <height>650</height>
-            <visible>[System.IdleTime(3) + Skin.HasSetting(osd.overlayinfoplayer) + Player.Paused] | Control.HasFocus(809)</visible>
+            <visible>System.IdleTime(3) + Skin.HasSetting(osd.overlayinfoplayer) + Player.Paused</visible>
             <include>Animation.FadeIn.Slide</include>
             <include>Animation.FadeOut</include>
 
@@ -59,7 +59,7 @@
                 <align>justify</align>
                 <font>Medium</font>
                 <textcolor>Dark1</textcolor>
-                <label>$INFO[VideoPlayer.Tagline,[B],[/B][CR][CR]]$INFO[VideoPlayer.Plot]</label>
+                <label fallback="416">$INFO[VideoPlayer.Tagline,[B],[/B][CR][CR]]$INFO[VideoPlayer.Plot]</label>
             </control>
         </control>
     </include>
@@ -72,11 +72,11 @@
             <height>1</height>
             <label></label>
             <font>noop</font>
-			<ondown>SetFocus(807)</ondown>
-			<onleft>SetFocus(807)</onleft>
-			<onup>SetFocus(807)</onup>
-			<onback>SetFocus(807)</onback>
-			<onright>SetFocus(807)</onright>
+			<ondown>SetFocus(18)</ondown>
+			<onleft>SetFocus(18)</onleft>
+			<onup>SetFocus(18)</onup>
+			<onback>SetFocus(18)</onback>
+			<onright>SetFocus(18)</onright>
             <include>DefOSDUpDown</include>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>	
@@ -129,7 +129,7 @@
                 <align>justify</align>
                 <font>Medium</font>
                 <textcolor>Dark1</textcolor>
-                <label>$INFO[VideoPlayer.Tagline,[B],[/B][CR][CR]]$INFO[VideoPlayer.Plot]</label>
+                <label fallback="416">$INFO[VideoPlayer.Tagline,[B],[/B][CR][CR]]$INFO[VideoPlayer.Plot]</label>
             </control>
         </control>
     </include>

@@ -4,7 +4,7 @@
     <defaultcontrol>-</defaultcontrol>
     
     <controls>
-        <include>Furniture_OverlayInfoNew</include>
+        
         <control type="group" id="0">
 			
             <left>0</left>
