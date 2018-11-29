@@ -33,6 +33,7 @@
 			<thumb />
 			<property name="labelID">20342</property>
 			<property name="defaultID">movies</property>
+			<property name="widgetaspect">Thumbnail</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,library://video/movies/titles.xml/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,library://video/movies/titles.xml/,return)</property>
