@@ -1632,6 +1632,10 @@ msgctxt "#37741"
 msgid "This is your personal rating and will not be published."
 msgstr "Das ist Ihre persönliche Bewertung und wird nicht veröffentlicht."
 
+msgctxt "#37747"
+msgid "Colors"
+msgstr "Farben"
+
 msgctxt "#31001"
 msgid "Backup / Restore"
 msgstr "Backup / Restore"
