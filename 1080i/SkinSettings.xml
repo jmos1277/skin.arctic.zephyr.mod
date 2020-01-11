@@ -997,8 +997,16 @@
 						<selected>Skin.HasSetting(furniture.showtomatoesandmetacritics)</selected>
                     	<onclick>Skin.ToggleSetting(furniture.showtomatoesandmetacritics)</onclick>
 					</control>
-					
-					<control type="radiobutton" id="9592">
+                    <control type="radiobutton" id="9593">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <include>DefSettingsButton</include>
+						<label>37742</label>
+						<selected>Skin.HasSetting(furniture.showtomatoesandmetacriticsonlyinfo)</selected>
+                    	<onclick>Skin.ToggleSetting(furniture.showtomatoesandmetacriticsonlyinfo)</onclick>
+                        <enable>Skin.HasSetting(furniture.showtomatoesandmetacritics)</enable>
+					</control>					
+					<control type="radiobutton" id="9594">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <include>DefSettingsButton</include>
@@ -1007,7 +1015,7 @@
                     	<onclick>Skin.ToggleSetting(furniture.showuserrating)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="9593">
+					<control type="radiobutton" id="9595">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <include>DefSettingsButton</include>
@@ -1015,7 +1023,7 @@
 						<selected>Skin.HasSetting(dontuselandscapetvshows)</selected>
                     	<onclick>Skin.ToggleSetting(dontuselandscapetvshows)</onclick>
 					</control>
-					<control type="radiobutton" id="9594">
+					<control type="radiobutton" id="9596">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <include>DefSettingsButton</include>
@@ -1023,7 +1031,7 @@
 						<selected>Skin.HasSetting(dontuselandscapeseasons)</selected>
                     	<onclick>Skin.ToggleSetting(dontuselandscapeseasons)</onclick>
 					</control>
-					<control type="radiobutton" id="9595">
+					<control type="radiobutton" id="9597">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <include>DefSettingsButton</include>
@@ -1031,14 +1039,14 @@
 						<selected>Skin.HasSetting(dontuselandscapemovies)</selected>
                     	<onclick>Skin.ToggleSetting(dontuselandscapemovies)</onclick>
 					</control>					
-					<control type="button" id="9596">
+					<control type="button" id="9598">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <include>DefSettingsButtonLabelName</include>
                         <label>HUBs</label>
                         <enable>false</enable>                    
                     </control> 
-					<control type="radiobutton" id="9597">
+					<control type="radiobutton" id="9599">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <include>DefSettingsButton</include>

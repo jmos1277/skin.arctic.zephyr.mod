@@ -9,7 +9,9 @@
     <controls>
 
         <include>GlobalBackground</include>
-
+        <include condition="Skin.HasSetting(furniture.showtomatoesandmetacritics) + !Skin.HasSetting(furniture.showtomatoesandmetacriticsonlyinfo)" content="TMBDHelperList">
+            <param name="LoadContent" value="$VAR[ContentDialogVideoInfo]" />
+        </include>               
         <include>View_550_List</include>
         <include condition="!Skin.HasSetting(50list.low)">View_50_List</include>
         <include condition="Skin.HasSetting(50list.low)">View_50_LowList</include>
@@ -19,8 +21,7 @@
         <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
         <include>View_53_Poster</include>
         <include>View_54_Banner</include>
-        <include>View_555_Wall_Episodes</include>
-		
+        <include>View_555_Wall_Episodes</include>		
         <include condition="Skin.HasSetting(55wall.showinfo)">View_55_Wall_Info</include>
         <include condition="Skin.HasSetting(55wall.showposter)">View_55_Wall_Poster</include>
         <include condition="!Skin.HasSetting(55wall.showinfo) + !Skin.HasSetting(55wall.showposter)">View_55_Wall</include>

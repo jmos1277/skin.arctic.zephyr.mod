@@ -53,8 +53,17 @@
     <!-- Skin Shortcuts -->
     <include file="script-skinshortcuts-includes.xml"/>
     
-	
-	
+	<include name="TMBDHelperList">
+        <control type="list" id="10100">
+            <top>-3000</top>
+            <left>-3000</left>
+            <width>1</width>
+            <height>1</height>
+            <itemlayout/>
+            <focusedlayout/>
+            <content>$PARAM[LoadContent]</content>
+        </control> 
+    </include>	
 	
 	<include name="FontTop">
 		<font>Medium</font>
@@ -1121,11 +1130,6 @@
 		<scroll>false</scroll>
 		<autoscroll>false</autoscroll>
 	</include>
-	
-	<variable name="Datab">
-		<value condition="!String.IsEmpty(Container(9502).ListItem.DBID)">plugin://service.library.data.provider?type=movie&amp;dbid=$INFO[Container(9502).ListItem.DBID]</value>
-		<value></value>
-	</variable>
 
 	<include name="Furniture_FlagsFromHome">
 		<control type="group">
@@ -2927,7 +2931,7 @@
 			</control>
             
             <!-- SETS Button -->
-            <control type="radiobutton" id ="9004">
+            <!--<control type="radiobutton" id ="9004">
                 <visible>String.IsEqual(ListItem.DBType,artist)</visible>	
                 <onfocus condition="!String.IsEqual(Window.Property(musiccontent),2)">ClearProperty(musiccontent)</onfocus>
                 <onclick>SetProperty(musiccontent,2)</onclick>                               
@@ -2938,7 +2942,7 @@
 				<include content="buttontextures">
 					<param name="icon" value="buttonsdialogs/set.png" />
 				</include>						
-			</control>
+			</control>-->
             
             <!-- Youtube Button -->	
             <control type="radiobutton" id ="9005">
@@ -3633,7 +3637,7 @@
             <height>36</height>
             <font>Tiny</font>
             <textcolor>Dark2</textcolor>
-            <label>$INFO[Container(9502).NumItems,, / ]$INFO[Window(Home).Property(SkinHelper.ListItem.Totalmovies),, $LOCALIZE[37542]]</label>
+            <label>$INFO[Container(9502).NumItems,, / ]$INFO[Container(10100).ListItem.Property(Set.NumItems),, $LOCALIZE[37542]]</label>
             <aligny>center</aligny>
         </control>
     </include>

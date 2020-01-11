@@ -675,7 +675,7 @@
                     </include>
 
                     <!-- Discography -->
-                    <include content="VideoListSquare">
+                    <!--<include content="VideoListSquare">
                         <param name="arrowleft" value="-12" />
                         <param name="arrowtop" value="342" />
                         <param name="arrowright" value="87" />
@@ -703,7 +703,7 @@
                         <param name="controlid" value="9501" />
                         <param name="alignleft" value="500" />
                         <param name="alignbottom" value="240" />
-                    </include>
+                    </include>-->
                 </control>
                 <control type="group">             
                     <visible>String.IsEqual(Window.Property(musiccontent),4)</visible>				
@@ -1905,7 +1905,7 @@
 					</control>
 				</control>
                 
-                <!-- Content List -->
+                <!-- Content List -->               
                 <control type="wraplist" id="9501">
                     <include>Animation.FadeIn.Slide</include>
                     <visible allowhiddenfocus="true">!String.IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating + !Control.IsVisible(50)</visible>

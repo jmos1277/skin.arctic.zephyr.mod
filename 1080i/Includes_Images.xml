@@ -196,8 +196,7 @@
 		<value condition="Container.Content(studios) + Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(Skin.String(studio.logos.path))">$INFO[Skin.String(studio.logos.path),,/]$INFO[ListItem.Label,,.png]</value>
         <value condition="Container.Content(studios) + Window.IsVisible(MyMusicNav.xml) + !String.IsEmpty(Skin.String(record.labels.path))">$INFO[Skin.String(record.labels.path),,/]$INFO[ListItem.Label,,.png]</value>	      
     </variable>
-	<variable name="ThumbImageStudiosDialogInfo">
-		<value condition="!String.IsEmpty(Skin.String(studio.logos.path)) + Window.IsVisible(Custom_MovieSets.xml)">$INFO[Skin.String(studio.logos.path),,/]$INFO[Window(Home).Property(SkinHelper.ListItem.Studio),,.png]</value>		
+	<variable name="ThumbImageStudiosDialogInfo">	
 		<value condition="!String.IsEmpty(Skin.String(studio.logos.path)) + !Window.IsVisible(Custom_MovieSets.xml)">$INFO[Skin.String(studio.logos.path),,/]$INFO[ListItem.Studio,,.png]</value>
         <value condition="!String.IsEmpty(Skin.String(record.labels.path))">$INFO[Skin.String(record.labels.path),,/]$INFO[ListItem.Studio,,.png]</value>       
     </variable>
@@ -276,24 +275,24 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="RottenTomatoesColored">
-		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),74) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))">backg/hot.png</value>
-		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),59) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))">backg/tomato.png</value>
-        <value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),0) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))">backg/rt.png</value>
+		<value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),74) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/hot.png</value>
+		<value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),59) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/tomato.png</value>
+        <value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),0) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/rt.png</value>
 		<value></value>
     </variable>
 	<variable name="RottenTomatoes">
-		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),74) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))">backg/hot_white.png</value>
-		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),59) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))">backg/tomato_white.png</value>
-        <value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),0) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))">backg/rt_white.png</value>
+		<value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),74) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/hot_white.png</value>
+		<value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),59) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/tomato_white.png</value>
+        <value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),0) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/rt_white.png</value>
 		<value></value>
     </variable>
     <variable name="RottenTomatoesAudienceColored">
-		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience),59) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience))">backg/good.png</value>
-        <value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience),0) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience))">backg/notgood.png</value>
+		<value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),59) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/good.png</value>
+        <value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_Rating),0) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_Rating))">backg/notgood.png</value>
     </variable>
     <variable name="RottenTomatoesAudience">
-		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience),59) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience))">backg/good_white.png</value>
-        <value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience),0) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rottentomatoes.Audience))">backg/notgood_white.png</value>	
+		<value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_UserMeter),59) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_UserMeter))">backg/good_white.png</value>
+        <value condition="Integer.IsGreater(Container(10100).ListItem.Property(RottenTomatoes_UserMeter),0) + !String.IsEmpty(Container(10100).ListItem.Property(RottenTomatoes_UserMeter))">backg/notgood_white.png</value>	
     </variable>
     
     <variable name="MusicDiscart">

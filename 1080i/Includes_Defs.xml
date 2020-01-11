@@ -35,7 +35,7 @@
         <value condition="!String.IsEmpty(Container(300).ListItem.Property(Background))">noop</value>
         <value condition="!String.IsEmpty(Skin.String(home.slideshowpath)) + String.IsEmpty(Container(300).ListItem.Property(widget))">noop</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
-        <value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+        <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
 
     <variable name="DefWidgetTarget">
@@ -328,7 +328,7 @@
             <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
         </control>
     </include>
-    
+
     <include name="DefDialogOK">
         <centerleft>50%</centerleft>
         <posy>360</posy>
@@ -860,7 +860,7 @@
     
     
     <variable name="InfoContentSimilar">
-		<value condition="String.IsEqual(Window.Property(content),3)">plugin://script.extendedinfo?info=similartvshows&amp;&amp;name=$INFO[ListItem.Label]</value>>
+		<value condition="String.IsEqual(Window.Property(content),3)">plugin://script.extendedinfo?info=similartvshows&amp;&amp;name=$INFO[ListItem.Title]</value>>
         <value condition="String.IsEqual(Window.Property(content),2)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[ListItem.DBID]</value>
     </variable>
     <variable name="InfoContentDirector">        
@@ -883,9 +883,23 @@
 		<value condition="String.IsEqual(Window.Property(musiccontentinfodisco),1)">plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]</value>> 
     </variable>
     
+    <variable name="ContentDialogVideoInfo">
+		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Title,..)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;query=$INFO[ListItem.Title]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Title,..)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=tv&amp;query=$INFO[ListItem.TVShowTitle]</value>
+    </variable>
     
+    <variable name="ContentDialogMovieSetsInfo">
+        <value>plugin://plugin.video.themoviedb.helper/?info=details&amp;type=collection&amp;query=$INFO[ListItem.Title]</value>
+    </variable>
     
+    <variable name="ContentDialogHubInfo">
+		<value condition="!String.IsEmpty(Container(9500).ListItem.Title) + !String.IsEqual(Container(9500).ListItem.Title,..)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;query=$INFO[Container(9500).ListItem.Title]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Container(9500).ListItem.Title) + !String.IsEqual(Container(9500).ListItem.Title,..)">plugin://plugin.video.themoviedb.helper/?info=details&amp;type=tv&amp;query=$INFO[ListItem.TVShowTitle]</value>
+    </variable>
     
+    <variable name="ContentDialogMovieSetsInfo">
+		<value>plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;query=$INFO[ListItem.Title]</value>
+    </variable>
     
     <variable name="ContentMusicDiscography">
 		<value condition="String.IsEqual(Window.Property(discography),1)">plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]</value>
@@ -900,13 +914,13 @@
     </variable>
     
     <variable name="ContentVideoSimilar">
-		<value condition="String.IsEqual(Window.Property(videosimilar),1) + Container.Content(tvshows)">plugin://script.extendedinfo?info=similartvshows&amp;&amp;name=$INFO[ListItem.Label]</value>
-        <value condition="String.IsEqual(Window.Property(videosimilar),1) + Container.Content(movies)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[ListItem.DBID]</value>
+		<value condition="String.IsEqual(Window.Property(videosimilar),1) + Container.Content(tvshows)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=tv&amp;query=$INFO[ListItem.Title]</value>
+        <value condition="String.IsEqual(Window.Property(videosimilar),1) + Container.Content(movies)">plugin://plugin.video.themoviedb.helper?info=similar&amp;type=movie&amp;query=$INFO[ListItem.Title]</value>
         <value>-</value>
     </variable>
     
     <variable name="ContentVideoStudio">        
-        <value condition="String.IsEqual(Window.Property(videostudio),1)">plugin://script.extendedinfo?info=studio&amp;&amp;studio=$INFO[ListItem.Studio]</value>
+        <value condition="String.IsEqual(Window.Property(videostudio),1)">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=movie&amp;with_companies=$INFO[ListItem.Studio]</value>
         <value>-</value>
     </variable>
     
@@ -917,8 +931,8 @@
     
     
     <variable name="DefDirectorInfoWindowContent">
-		<value condition="String.IsEqual(Window.Property(content),4)">plugin://script.extendedinfo?info=recommedtvshows&amp;&amp;name=$INFO[ListItem.Label]</value>
-		<value condition="String.IsEqual(Window.Property(content),3)">plugin://script.extendedinfo?info=similartvshows&amp;&amp;name=$INFO[ListItem.Label]</value>
+		<value condition="String.IsEqual(Window.Property(content),4)">plugin://script.extendedinfo?info=recommedtvshows&amp;&amp;name=$INFO[ListItem.Title]</value>
+		<value condition="String.IsEqual(Window.Property(content),3)">plugin://script.extendedinfo?info=similartvshows&amp;&amp;name=$INFO[ListItem.Title]</value>
         <value condition="String.IsEqual(Window.Property(content),1)">plugin://script.extendedinfo?info=studio&amp;&amp;studio=$INFO[ListItem.Studio]</value>
         <value condition="String.IsEqual(Window.Property(content),2)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[ListItem.DBID]</value>
 		<value condition="String.IsEqual(Window.Property(content),5)">plugin://script.extendedinfo?info=recommedmovies&amp;&amp;dbid=$INFO[ListItem.DBID]</value>
@@ -1277,6 +1291,9 @@
     </include>
 
     <include name="DefHubWindow">
+        <include content="TMBDHelperList">
+            <param name="LoadContent" value="$VAR[ContentDialogHubInfo]" />
+        </include> 
         <include>GlobalBackground</include>
         <include>Furniture_Header</include>
         <include>Furniture_NowPlaying</include>
@@ -1726,7 +1743,7 @@
             <right>30</right>
             <bottom>10</bottom>
             <aspectratio scalediffuse="false">$PARAM[aspect]</aspectratio>
-            <texture diffuse="diffuse/wall.png" background="true" fallback="$PARAM[fallbackpicture]">$INFO[ListItem.Art(thumb)]</texture>
+            <texture diffuse="diffuse/wall.png" background="true" fallback="$PARAM[fallbackpicture]">$INFO[ListItem.Icon]</texture>
         </control>
         <control type="group">
             <visible>$PARAM[storageicon]</visible>
@@ -1788,7 +1805,7 @@
                 <right>30</right>
                 <bottom>10</bottom>
                 <aspectratio scalediffuse="false">$PARAM[aspect]</aspectratio>
-                <texture diffuse="diffuse/wall.png" background="true" fallback="$PARAM[fallbackpicture]">$INFO[ListItem.Art(thumb)]</texture>
+                <texture diffuse="diffuse/wall.png" background="true" fallback="$PARAM[fallbackpicture]">$INFO[ListItem.Icon]</texture>
             </control>
             <control type="group">
                 <visible>$PARAM[storageicon]</visible>
@@ -1844,6 +1861,4 @@
         </control>
         </definition>
     </include>
-       
-
 </includes>
