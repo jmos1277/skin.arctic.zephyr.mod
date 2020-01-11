@@ -130,32 +130,32 @@
 
 	<variable name="504_Row_1">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[29909]: $INFO[ListItem.Studio]</value>
-		<value condition="ListItem.IsCollection">$LOCALIZE[515]: $INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
+		<value condition="ListItem.IsCollection">$LOCALIZE[515]: $INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value><!-- [SKINHELPER] -->
         <value>$LOCALIZE[515]: $INFO[ListItem.Genre]</value>
     </variable>
 	<variable name="504_Row_2">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[20352]: $INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]] $INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
-		<value condition="ListItem.IsCollection">$LOCALIZE[20339]: $INFO[Window(Home).Property(SkinHelper.ListItem.Director)]</value>
+		<value condition="ListItem.IsCollection">$LOCALIZE[20339]: $INFO[Window(Home).Property(SkinHelper.ListItem.Director)]</value><!-- [SKINHELPER] -->
         <value>$LOCALIZE[20339]: $INFO[ListItem.Director]</value>
     </variable>
 	<variable name="504_Row_3">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[563]: $INFO[ListItem.MPAA]</value>
-		<value condition="ListItem.IsCollection">$LOCALIZE[2050]: $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),,$LOCALIZE[37615] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),,$LOCALIZE[31102]]</value>
+		<value condition="ListItem.IsCollection">$LOCALIZE[2050]: $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),,$LOCALIZE[37615] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),,$LOCALIZE[31102]]</value><!-- [SKINHELPER] -->
         <value>$LOCALIZE[2050]: $VAR[LabelDurationTimeCheck]</value>
     </variable>
 	
 	<variable name="509_Row_1">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]] $INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Year]  •  $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),,$LOCALIZE[37615] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),,$LOCALIZE[31102],  •  , $LOCALIZE[31102]]$INFO[ListItem.Rating,  •  ,]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Year]  •  $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),,$LOCALIZE[37615] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),,$LOCALIZE[31102],  •  , $LOCALIZE[31102]]$INFO[ListItem.Rating,  •  ,]</value><!-- [SKINHELPER] -->
         <value>$INFO[ListItem.Year]$VAR[LabelDurationTimeCheck,  •  ,]$INFO[ListItem.Rating,  •  ,]</value>
     </variable>
 	<variable name="509_Row_2">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Studio]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Studio)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Studio)]</value><!-- [SKINHELPER] -->
         <value>$INFO[ListItem.Studio]</value>
     </variable>
 	<variable name="509_Row_3">
-		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value><!-- [SKINHELPER] -->
         <value>$INFO[ListItem.Genre]</value>
     </variable>
 	
@@ -234,7 +234,7 @@
         <value condition="!String.IsEmpty(ListItem.TvShowTitle) + [Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows)]">$INFO[ListItem.TvShowTitle]</value>
         <value condition="!String.IsEmpty(ListItem.Label) + Control.IsVisible(55)">$INFO[ListItem.Label]</value>
         <value condition="!String.IsEmpty(ListItem.Director)">$INFO[ListItem.Director]</value>
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.Director))">$INFO[Window(home).Property(SkinHelper.MovieSet.Director)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.Director))">$INFO[Window(home).Property(SkinHelper.MovieSet.Director)]</value><!-- [SKINHELPER] -->
         <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.Director))">$INFO[Window(home).Property(Set.Movies.Director)]</value>
         <value>$LOCALIZE[19055]</value>
     </variable>
@@ -243,7 +243,7 @@
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]$INFO[ListItem.Studio,  •  ]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ,]$INFO[ListItem.Episode,  •  $LOCALIZE[20359] ,]$INFO[ListItem.Premiered,  •  ,]$VAR[LabelDurationTimeCheck,  •  ,]</value>
         <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)]</value><!-- [SKINHELPER] -->
         <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.Genre))">$INFO[Window(home).Property(Set.Movies.Genre)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Genre))">$INFO[ListItem.Property(Artist_Genre)]</value>
         <value>$LOCALIZE[19055]</value>
@@ -289,7 +289,7 @@
         <value condition="[Container.Content(tvshows) + !Control.IsVisible(54) + !Control.IsVisible(555)] | Container.Content(episodes)">$VAR[LabelYear]</value>
     </variable>
     <variable name="LabelPlotBox">
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value><!-- [SKINHELPER] -->
         <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -299,7 +299,7 @@
         <value>$INFO[ListItem.Plot]</value>
     </variable>
     <variable name="LabelOverlayPlot">
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value><!-- [SKINHELPER] -->
         <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -906,7 +906,7 @@
     <variable name="LabelArtistAlbum">
         <value condition="Container.Content(artists)">$INFO[ListItem.Genre]$INFO[ListItem.Property(Artist_Born),  •  ,]</value>
         <value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year,  •  ,]$INFO[ListItem.Genre,  •  ,]</value>
-        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
+        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value><!-- [SKINHELPER] -->
         <value condition="Container.Content(movies)">$VAR[513_Row_1]</value>
         <value condition="Container.Content(tvshows)">$INFO[ListItem.Genre]</value>
 	</variable>
@@ -942,6 +942,11 @@
     <variable name="OSDTypeLabel">
         <value condition="Skin.HasSetting(osd.usethemeNewOSDSide)">$LOCALIZE[37739]</value>
         <value condition="Skin.HasSetting(osd.usethemeNewOSD)">$LOCALIZE[37738]</value>
+        <value>$LOCALIZE[10037]</value>
+    </variable>
+    
+    <variable name="InfoTypeLabel">
+        <value condition="Skin.HasSetting(wipinfo)">$LOCALIZE[37738]</value>
         <value>$LOCALIZE[10037]</value>
     </variable>
     

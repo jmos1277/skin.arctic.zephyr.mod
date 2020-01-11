@@ -692,7 +692,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>Dark2</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Rating] ($INFO[ListItem.Votes,, $LOCALIZE[205])</label>
+                                <label fallback="19055">$INFO[ListItem.Rating] ($INFO[ListItem.Votes,, $LOCALIZE[205]])</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
