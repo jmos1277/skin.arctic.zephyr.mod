@@ -806,15 +806,7 @@
                     	<selected>Skin.HasSetting(rss.top)</selected>
                     	<onclick>Skin.ToggleSetting(rss.top)</onclick>
 						<enable>System.GetBool(lookandfeel.enablerssfeeds)</enable>
-					</control>
-                    <control type="radiobutton" id="9574">
-                        <width>1310</width>
-                        <visible>ControlGroup(9100).HasFocus(9122)</visible>
-                        <include>DefSettingsButton</include>
-						<label>$LOCALIZE[37552] deprio</label>                   
-                    	<selected>Skin.HasSetting(olddialogbuttons)</selected>
-                    	<onclick>Skin.ToggleSetting(olddialogbuttons)</onclick>
-					</control>
+					</control>                    
                     <control type="radiobutton" id="9582">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9122)</visible>
@@ -910,6 +902,14 @@
 						<label>37745</label>                   
                     	<selected>Skin.HasSetting(hub.showplot)</selected>
                     	<onclick>Skin.ToggleSetting(hub.showplot)</onclick>
+					</control>
+                    <control type="radiobutton" id="9574">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9122)</visible>
+                        <include>DefSettingsButton</include>
+						<label>$LOCALIZE[37552]</label>                   
+                    	<selected>Skin.HasSetting(olddialogbuttons)</selected>
+                    	<onclick>Skin.ToggleSetting(olddialogbuttons)</onclick>
 					</control>
 
 
