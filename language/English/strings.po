@@ -1727,7 +1727,7 @@ msgid "     "
 msgstr ""
 
 msgctxt "#37743"
-msgid "Video / Audio Info"
+msgid "Video / Music Info"
 msgstr ""
 
 msgctxt "#37744"
