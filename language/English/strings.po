@@ -1746,6 +1746,30 @@ msgctxt "#37747"
 msgid "Colors"
 msgstr ""
 
+msgctxt "#37748"
+msgid "-- Video Information --"
+msgstr ""
+
+msgctxt "#37749"
+msgid "-- Video OSD --"
+msgstr ""
+
+msgctxt "#37750"
+msgid "-- Music OSD --"
+msgstr ""
+
+msgctxt "#37751"
+msgid "-- Widgets --"
+msgstr ""
+
+msgctxt "#37752"
+msgid "-- Views --"
+msgstr ""
+
+msgctxt "#37753"
+msgid "-- HUBs --"
+msgstr ""
+
 msgctxt "#31001"
 msgid "Backup / Restore"
 msgstr "Backup / Restore"
