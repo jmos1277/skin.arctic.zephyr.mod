@@ -5,6 +5,57 @@
     <include name="View_504_Fanart">
         <description>List View (id=504)</description>
         <control type="group">
+        
+            <control type="grouplist">
+                <orientation>vertical</orientation>
+                <width>1800</width>
+                <right>SidePad</right>
+                <height>500</height>
+                <itemgap>-2</itemgap>
+                <control type="label">                    
+                    <height>36</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <textcolor>Dark2</textcolor>
+                    <label fallback="19055">season.poster: $INFO[ListItem.Art(season.poster)]  [season.poster:] </label>
+                </control>
+                <control type="label">                    
+                    <height>36</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <textcolor>Dark2</textcolor>
+                    <label fallback="19055">$INFO[ListItem.Art(poster)]  [poster:] </label>
+                </control>
+                <control type="label">                    
+                    <height>36</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <textcolor>Dark2</textcolor>
+                    <label fallback="19055">$INFO[ListItem.Art(tvshow.poster)]  [tvshow.poster:] </label>
+                </control>
+                <control type="label">                    
+                    <height>36</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <textcolor>Dark2</textcolor>
+                    <label fallback="19055">$INFO[ListItem.Icon]  [Icon:] </label>
+                </control>
+                <control type="label">                    
+                    <height>36</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <textcolor>Dark2</textcolor>
+                    <label fallback="19055">$INFO[ListItem.Art(fanart)]  [fanart:] </label>
+                </control>
+                <control type="label">                    
+                    <height>36</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <textcolor>Dark2</textcolor>
+                    <label fallback="19055">$INFO[ListItem.Art(landscape)]  [landscape:] </label>
+                </control>
+
+            </control>        
             <include>Animation.Common</include>
             <visible>Control.IsVisible(504)</visible>
             <include>JumpBarHorizontal</include>
