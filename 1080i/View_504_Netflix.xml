@@ -135,7 +135,7 @@
                     <height>360</height>
                     <fadetime>200</fadetime>
                     <aspectratio aligny="center" align="center" scalediffuse="false">keep</aspectratio>
-                    <texture diffuse="diffuse/listposter.png" background="true">$INFO[ListItem.Icon]</texture>
+                    <texture diffuse="diffuse/listposter.png" background="true">DefaultAddonAlbumInfo.png</texture>
                     <visible>String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
                 <control type="image">
@@ -197,7 +197,7 @@
                     <height>330</height>
                     <fadetime>200</fadetime>
                     <aspectratio aligny="center" align="center" scalediffuse="false">keep</aspectratio>
-                    <texture diffuse="diffuse/listposter.png" background="true">$INFO[ListItem.Icon]</texture>
+                    <texture diffuse="diffuse/listposter.png" background="true">DefaultAddonAlbumInfo.png</texture>
                     <visible>String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
                 <control type="image">
